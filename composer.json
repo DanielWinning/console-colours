@@ -1,7 +1,7 @@
 {
     "name": "winningsoftware/console-colours",
-    "version": "0.1.0",
-    "license": "GNU GPLv3",
+    "version": "0.1.1",
+    "license": "GPL-3.0-or-later",
     "autoload": {
         "psr-4": {
             "WinningSoftware\\ConsoleColours\\": "src/"
