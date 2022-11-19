@@ -1,0 +1,17 @@
+{
+    "name": "winningsoftware/console-colours",
+    "version": "0.1.0",
+    "license": "GNU GPLv3",
+    "autoload": {
+        "psr-4": {
+            "WinningSoftware\\ConsoleColours\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Daniel Winning",
+            "email": "daniel@winningsoftware.co.uk"
+        }
+    ],
+    "minimum-stability": "dev"
+}
