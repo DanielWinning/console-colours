@@ -37,4 +37,6 @@ class ConsoleColour
     public const BG_BRIGHT_MAGENTA = '\033[105m';
     public const BG_BRIGHT_CYAN = '\033[106m';
     public const BG_BRIGHT_WHITE = '\033[107m';
+
+    public const RESET = '\033[0m';
 }
