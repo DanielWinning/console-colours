@@ -39,4 +39,7 @@ class ConsoleColour
     public const BG_BRIGHT_WHITE = "\033[107m";
 
     public const RESET = "\033[0m";
+    public const BOLD = "\033[1m";
+    public const UNDERLINE = "\033[4m";
+    public const SLOW_BLINK = "\033[5m";
 }
