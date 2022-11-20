@@ -42,4 +42,70 @@ class ConsoleColour
     public const BOLD = "\033[1m";
     public const UNDERLINE = "\033[4m";
     public const SLOW_BLINK = "\033[5m";
+
+    public const TEXT = [
+        'BLACK' => self::FG_BLACK,
+        'RED' => self::FG_RED,
+        'GREEN' => self::FG_GREEN,
+        'YELLOW' => self::FG_YELLOW,
+        'BLUE' => self::FG_BLUE,
+        'MAGENTA' => self::FG_MAGENTA,
+        'CYAN' => self::FG_CYAN,
+        'WHITE' => self::FG_WHITE,
+        'BRIGHT_BLACK' => self::FG_BRIGHT_BLACK,
+        'BRIGHT_RED' => self::FG_BRIGHT_RED,
+        'BRIGHT_GREEN' => self::FG_BRIGHT_GREEN,
+        'BRIGHT_YELLOW' => self::FG_BRIGHT_YELLOW,
+        'BRIGHT_BLUE' => self::FG_BRIGHT_BLUE,
+        'BRIGHT_MAGENTA' => self::FG_BRIGHT_MAGENTA,
+        'BRIGHT_CYAN' => self::FG_BRIGHT_CYAN,
+        'BRIGHT_WHITE' => self::FG_BRIGHT_WHITE,
+        'BOLD' => self::BOLD,
+        'UNDERLINE' => self::UNDERLINE,
+        'RESET' => self::RESET,
+        'SLOW_BLINK' => self::SLOW_BLINK,
+    ];
+
+    public const BG = [
+        'BLACK' => self::BG_BLACK,
+        'RED' => self::BG_RED,
+        'GREEN' => self::BG_GREEN,
+        'YELLOW' => self::BG_YELLOW,
+        'BLUE' => self::BG_BLUE,
+        'MAGENTA' => self::BG_MAGENTA,
+        'CYAN' => self::BG_CYAN,
+        'WHITE' => self::BG_WHITE,
+        'BRIGHT_BLACK' => self::BG_BRIGHT_BLACK,
+        'BRIGHT_RED' => self::BG_BRIGHT_RED,
+        'BRIGHT_GREEN' => self::BG_BRIGHT_GREEN,
+        'BRIGHT_YELLOW' => self::BG_BRIGHT_YELLOW,
+        'BRIGHT_BLUE' => self::BG_BRIGHT_BLUE,
+        'BRIGHT_MAGENTA' => self::BG_BRIGHT_MAGENTA,
+        'BRIGHT_CYAN' => self::BG_BRIGHT_CYAN,
+        'BRIGHT_WHITE' => self::BG_BRIGHT_WHITE,
+    ];
+
+    public static function text(array $modifiers): string
+    {
+        $modifierString = '';
+
+        foreach ($modifiers as $modifier) {
+            if (\array_key_exists(strtoupper($modifier), self::TEXT)) {
+                $modifierString .= self::TEXT[strtoupper($modifier)];
+            }
+        }
+
+        return $modifierString;
+    }
+
+    public static function bg(string $colour): string
+    {
+        $modifierString = '';
+
+        if (\array_key_exists(strtoupper($colour), self::BG)) {
+            $modifierString .= self::BG[strtoupper($colour)];
+        }
+
+        return $modifierString;
+    }
 }
